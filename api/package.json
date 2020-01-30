@@ -1,0 +1,23 @@
+{
+  "name": "node-postgresql-restapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.12.1",
+    "body-parser": "^1.15.2",
+    "bcrypt-nodejs": "0.0.3",
+    "moment": "^2.17.1",
+    "jwt-simple": "^0.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}

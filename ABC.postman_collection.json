@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "bdc28da9-5ab5-409d-9d26-9dee6a9b2a97",
+		"name": "ABC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "luismera92@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "luis1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3977/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "j.m@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "luis1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3977/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJMdWlzIE1lcmEiLCJlbWFpbCI6Imx1aXNtZXJhOTJAZ21haWwuY29tIiwiaWF0IjoxNTgwMzg1NjQ0fQ.yRUTp6nJqsKPwb-PP2CP1yDjqR5gn1WfOuRFh75IhQs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3977/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJMdWlzIE1lcmEiLCJlbWFpbCI6Imx1aXNtZXJhOTJAZ21haWwuY29tIiwiaWF0IjoxNTgwMzg1NjQ0fQ.yRUTp6nJqsKPwb-PP2CP1yDjqR5gn1WfOuRFh75IhQs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3977/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJMdWlzIE1lcmEiLCJlbWFpbCI6Imx1aXNtZXJhOTJAZ21haWwuY29tIiwiaWF0IjoxNTgwMzg1NjQ0fQ.yRUTp6nJqsKPwb-PP2CP1yDjqR5gn1WfOuRFh75IhQs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3977/api/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJMdWlzIE1lcmEiLCJlbWFpbCI6Imx1aXNtZXJhOTJAZ21haWwuY29tIiwiaWF0IjoxNTgwMzg3MTgxfQ.49IlxL4d_8MzaCUBbjPROQCBelRLSHgECzd2_FBPvCA",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Cali Hiking to 3 Cruces Meetup",
+									"type": "text"
+								},
+								{
+									"key": "categorie",
+									"value": "Seminario",
+									"type": "text"
+								},
+								{
+									"key": "place",
+									"value": "Cali, Colombia",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Carrera 10 calle 1 san antonio",
+									"type": "text"
+								},
+								{
+									"key": "date_start",
+									"value": "01/02/2020",
+									"type": "text"
+								},
+								{
+									"key": "date_end",
+									"value": "01/02/2020",
+									"type": "text"
+								},
+								{
+									"key": "type_event",
+									"value": "Presencial",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3977/api/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJMdWlzIE1lcmEiLCJlbWFpbCI6Imx1aXNtZXJhOTJAZ21haWwuY29tIiwiaWF0IjoxNTgwMzg3MTgxfQ.49IlxL4d_8MzaCUBbjPROQCBelRLSHgECzd2_FBPvCA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3977/api/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"name": "Content-Type",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJMdWlzIE1lcmEiLCJlbWFpbCI6Imx1aXNtZXJhOTJAZ21haWwuY29tIiwiaWF0IjoxNTgwMzg3MTgxfQ.49IlxL4d_8MzaCUBbjPROQCBelRLSHgECzd2_FBPvCA",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJMdWlzIE1lcmEiLCJlbWFpbCI6Imx1aXNtZXJhOTJAZ21haWwuY29tIiwiaWF0IjoxNTgwMzg3MTgxfQ.49IlxL4d_8MzaCUBbjPROQCBelRLSHgECzd2_FBPvCA"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3977/api/events/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"api",
+								"events",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"name": "Content-Type",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJMdWlzIE1lcmEiLCJlbWFpbCI6Imx1aXNtZXJhOTJAZ21haWwuY29tIiwiaWF0IjoxNTgwMzg3MTgxfQ.49IlxL4d_8MzaCUBbjPROQCBelRLSHgECzd2_FBPvCA",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJMdWlzIE1lcmEiLCJlbWFpbCI6Imx1aXNtZXJhOTJAZ21haWwuY29tIiwiaWF0IjoxNTgwMzg3MTgxfQ.49IlxL4d_8MzaCUBbjPROQCBelRLSHgECzd2_FBPvCA"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3977/api/events/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"api",
+								"events",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
