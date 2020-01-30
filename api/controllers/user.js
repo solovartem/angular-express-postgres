@@ -55,7 +55,9 @@ async function loginUser(req, res) {
         bcrypt.compare(password, user.password, function(err, check){
             if(check){
                 res.status(200).send({
-                    token: jwt.createToken(user)
+                    id: user.id,
+                    token: jwt.createToken(user),
+                    usuario: user
                 });
             }else{
                 res.status(404).send({message: 'El usuario no ha podido loguease'});

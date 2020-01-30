@@ -1,0 +1,48 @@
+<!-- ============================================================== -->
+<!-- Start Page Content -->
+<!-- ============================================================== -->
+<div class="row">
+  <div class="col-12">
+      <div class="card">
+          <div class="card-body">
+              <button (click)="openFormModal('nuevo')" class="btn btn-info text-white m-b-30">Nuevo Evento</button>
+              <div *ngIf="events.length == 0" class="clear">
+                  <div class="alert alert-info alert-rounded">En el momento no tiene ningun eventos registrado.</div>
+              </div>
+              <div *ngIf="events.length > 0">
+                  <table class="table table-bordered table-hover m-t-0 small">
+                      <thead>
+                          <tr>
+                              <th>Nombre</th>
+                              <th>Categoria</th>
+                              <th>Lugar</th>
+                              <th>Dirección</th>
+                              <th>Fecha inicio</th>
+                              <th>Fecha fin</th>
+                              <th>Tipo</th>
+                              <th width="80px"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let event of events; let i = index">
+                              <td>{{event.name}}</td>
+                              <td>{{event.categorie}}</td>
+                              <td>{{event.place}}</td>
+                              <td>{{event.address}}</td>
+                              <td>{{event.date_start}}</td>
+                              <td>{{event.date_end}}</td>
+                              <td>{{event.type_event}}</td>
+                              <td>
+                                  <div class="btn-group">
+                                      <button (click)="openFormModal( event.id )" class="btn btn-sm btn-info"><i class="mdi mdi-pencil"></i></button>
+                                      <button (click)="deleteEvent( event.id )" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

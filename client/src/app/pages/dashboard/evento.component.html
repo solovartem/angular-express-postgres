@@ -1,0 +1,76 @@
+<div class="modal-header">
+    <h4 class="modal-title">Sucursal</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"><span class="fa fa-times"></span></button>
+</div>
+<form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 form-group">
+                    <label>Nombe <span class="text-danger">*</span></label>
+                    <input class="form-control" type="text" required="" formControlName="name">
+                    <small class="text-danger" *ngIf="eventForm.get('name').touched && eventForm.get('name').hasError('required')">Este campo es requerido</small>
+                </div>
+                <div class="col-4 form-group">
+                    <label>Categoria <span class="text-danger">*</span></label>
+                    <select class="form-control" required="" formControlName="categorie">
+                        <option value="">Seleccione una opcion</option> 
+                        <option value="Conferencia">Conferencia</option> 
+                        <option value="Seminario">Seminario</option> 
+                        <option value="Congreso">Congreso</option> 
+                        <option value="Curso">Curso</option> 
+                    </select>
+                    <small class="text-danger" *ngIf="eventForm.get('categorie').touched && eventForm.get('categorie').hasError('required')">Este campo es requerido</small>
+                </div>
+                <div class="col-4 form-group">
+                    <label>Lugar <span class="text-danger">*</span></label>
+                    <input class="form-control" type="text" required="" formControlName="place">
+                    <small class="text-danger" *ngIf="eventForm.get('place').touched && eventForm.get('place').hasError('required')">Este campo es requerido</small>
+                </div>
+                <div class="col-4 form-group">
+                    <label>Direccion <span class="text-danger">*</span></label>
+                    <input class="form-control" type="text" required="" formControlName="address">
+                    <small class="text-danger" *ngIf="eventForm.get('address').touched && eventForm.get('address').hasError('required')">Este campo es requerido</small>
+                </div>
+                <div class="col-4 form-group">
+                    <label>Fecha inicio <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <input class="form-control" type="text" required="" formControlName="date_start" placeholder="DD/MM/AAAA" ngbDatepicker #a="ngbDatepicker" (click)="a.toggle()">
+                        <div class="input-group-append" (click)="a.toggle()">
+                            <span class="input-group-text">
+                                <span class="mdi mdi-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <small class="text-danger" *ngIf="eventForm.get('date_start').touched && eventForm.get('date_start').hasError('required')">Este campo es requerido</small>
+                </div>
+                <div class="col-4 form-group">
+                    <label>Fecha fin <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <input class="form-control" type="text" required="" formControlName="date_end" placeholder="DD/MM/AAAA" ngbDatepicker #b="ngbDatepicker" (click)="b.toggle()">
+                        <div class="input-group-append" (click)="b.toggle()">
+                            <span class="input-group-text">
+                                <span class="mdi mdi-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <small class="text-danger" *ngIf="eventForm.get('date_end').touched && eventForm.get('date_end').hasError('required')">Este campo es requerido</small>
+                </div>
+                <div class="col-4 form-group">
+                    <label>Tipo <span class="text-danger">*</span></label>
+                    <select class="form-control" required="" formControlName="type_event">
+                        <option value="">Seleccione una opcion</option> 
+                        <option value="Presencial">Presencial</option> 
+                        <option value="Virtual">Virtual</option>
+                    </select>
+                    <small class="text-danger" *ngIf="eventForm.get('type_event').touched && eventForm.get('type_event').hasError('required')">Este campo es requerido</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button [disabled]="eventForm.invalid" *ngIf="!isLoading" class="btn btn-success waves-effect waves-light m-r-10"><i class="fa fa-save"></i> Guardar</button>
+        <button *ngIf="isLoading" disabled class="btn btn-success waves-effect waves-light m-r-10"><i class="fa fa-spin fa-sync"></i> Espere...</button>
+        <button (click)="activeModal.dismiss('Cross click')" class="btn btn-inverse waves-effect waves-light">Cancelar</button>
+    </div>
+</form>
